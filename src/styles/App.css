@@ -1,0 +1,66 @@
+.app_main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding: 20px 100px;
+}
+
+/* .app_main .titleBlock {
+  height: 500px;
+  width: 400px;
+} */
+
+.app_main .titleBlock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.app_main .titleBlock {
+  width: 330px;
+  max-width: 350px;
+  height: auto;
+  padding: 8px 8px;
+}
+
+.app_main .titleBlock > p:first-child {
+  font-family: Roboto;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+
+.app_main .titleBlock > p:last-child {
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #00000080;
+}
+
+.app_main .track {
+  display: flex;
+  justify-content: space-between;
+}
+
+.app_main .track > div {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  background-color: blue;
+  margin: 5px;
+}
+
+.app_main .track > div::after {
+  content: "";
+  border-right: 4px solid blue;
+  width: 100px;
+}

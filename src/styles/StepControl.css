@@ -1,0 +1,28 @@
+.stepControl_main {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.stepControl_main > .button{
+    border-radius: 5px;
+    height: 34px;
+    width: 5rem;
+    outline: none;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    margin: 5px;
+    display: block;
+}
+
+.activeBg_color {
+    background-color: blue;
+    color: white;
+}
+
+.disableBg_color {
+    background-color: #ffffff;
+    color: #7A7C8566
+}
