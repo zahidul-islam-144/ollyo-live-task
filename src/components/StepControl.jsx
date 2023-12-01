@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "../sharedComponents/Button";
 
-const StepControl = ({ step, isNext, isSubmit }) => {
+const StepControl = ({ step, isNext, isSubmit, setIsSubmit }) => {
     console.log('stepControl:',step, isNext)
   const disabled = isNext ? false : true;
   return (
@@ -13,6 +13,7 @@ const StepControl = ({ step, isNext, isSubmit }) => {
         }`}
         disabled={disabled}
         isSubmit={isSubmit}
+        setIsSubmit={setIsSubmit}
       />
 
       <Button
@@ -22,6 +23,7 @@ const StepControl = ({ step, isNext, isSubmit }) => {
         }`}
         disabled={disabled}
         isSubmit={isSubmit}
+        setIsSubmit={setIsSubmit}
       />
     </div>
   );

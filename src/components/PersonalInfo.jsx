@@ -8,7 +8,7 @@ import validator from "validator";
 const PersonalInfo = ({ step, nextStep, handleInputData, formData }) => {
     console.log("* formData:", formData)
   const [error, setError] = useState('');
-  const [submit, setIsSubmit] = useState(false)
+  const [isSubmit, setIsSubmit] = useState(false)
   const { personalInfo } = formUtility;
 
 
@@ -28,12 +28,12 @@ const PersonalInfo = ({ step, nextStep, handleInputData, formData }) => {
         nextStep();
     }
   };
-console.log('* error', error, step)
+console.log('* error', error, isSubmit)
 
 
   return (
     <section className="personalInfoMain">
-      <form onSubmit={submitFormData} className="personalInfoForm">
+      <form onSubmit={isSubmit && submitFormData} className="personalInfoForm">
         {personalInfo.map((info) => (
           <div>
             <Label label={info?.label} />
@@ -49,7 +49,7 @@ console.log('* error', error, step)
           </div>
         ))}
       </form>
-      <StepControl step={step} isNext={true} isSubmit={handeSubmit}/>
+      <StepControl step={step} isNext={true} isSubmit={isSubmit} setIsSubmit={setIsSubmit}/>
     </section>
   );
 };
